@@ -3,6 +3,8 @@ const users = require('./users.json')
 const fs = require('fs')
 const faker = require('faker')
 
+//Test comment
+
 const seed = async () => {
   try {
     console.log('syncing DB...')
@@ -25,7 +27,7 @@ const seed = async () => {
 const generateJSON = (num) => {
   const users = Array(num).fill({}).map(o => {
     const firstName = faker.name.firstName()
-    const lastName  = faker.name.lastName()
+    const lastName = faker.name.lastName()
     return {
       firstName,
       lastName,
@@ -42,6 +44,6 @@ module.exports = {
   generateJSON
 }
 
-if (require.main === module){
+if (require.main === module) {
   seed()
 }
